@@ -44,3 +44,10 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.remote = 'git@github.com:joealba/elevenelevenri.com.github.io.git'
+  deploy.branch = 'master'
+  deploy.build_before = true
+end
